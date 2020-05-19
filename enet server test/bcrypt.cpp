@@ -49,7 +49,7 @@
 #ifdef __linux__
 #include <process.h>
 #endif
-#include <process.h> /* for getpid() and the exec..() family */
+
 #include <direct.h> /* for _getcwd() and _chdir() */
 
 #define srandom srand
