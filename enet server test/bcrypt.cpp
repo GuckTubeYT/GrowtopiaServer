@@ -24,11 +24,19 @@
 * https://stackoverflow.com/a/826027/1202830
 */
 #ifdef __APPLE__
-#include "sys/io.h"
+#include <sys/uio.h>
 #endif
 
 #include <stdlib.h>
+#ifdef _WIN32
 #include <io.h>
+#endif
+#ifdef _WIN64
+#include <io.h>
+#endif
+#ifdef __linux__
+#include <io.h>
+#endif
 //#include <getopt.h> /* getopt at: https://gist.github.com/ashelly/7776712 */
 #include <process.h> /* for getpid() and the exec..() family */
 #include <direct.h> /* for _getcwd() and _chdir() */
