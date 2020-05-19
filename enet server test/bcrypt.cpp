@@ -15,7 +15,9 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-//#include <unistd.h>
+#ifdef __APPLE__
+#include <unistd.h>
+#endif
 #ifndef _UNISTD_H
 #define _UNISTD_H    1
 
@@ -38,6 +40,15 @@
 #include <io.h>
 #endif
 //#include <getopt.h> /* getopt at: https://gist.github.com/ashelly/7776712 */
+#ifdef _WIN32
+#include <process.h>
+#endif
+#ifdef _WIN64
+#include <process.h>
+#endif
+#ifdef __linux__
+#include <process.h>
+#endif
 #include <process.h> /* for getpid() and the exec..() family */
 #include <direct.h> /* for _getcwd() and _chdir() */
 
