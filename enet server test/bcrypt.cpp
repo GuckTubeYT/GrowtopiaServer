@@ -24,7 +24,7 @@
 * https://stackoverflow.com/a/826027/1202830
 */
 #ifdef __APPLE__
-#include <sys/io.h>
+#include "sys/io.h"
 #endif
 
 #include <stdlib.h>
