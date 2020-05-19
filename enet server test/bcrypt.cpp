@@ -49,8 +49,15 @@
 #ifdef __linux__
 #include <process.h>
 #endif
-
-#include <direct.h> /* for _getcwd() and _chdir() */
+#ifdef _WIN32
+#include <direct.h>
+#endif
+#ifdef _WIN64
+#include <direct.h>
+#endif
+#ifdef __linux__
+#include <direct.h>
+#endif
 
 #define srandom srand
 #define random rand
