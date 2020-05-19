@@ -23,6 +23,9 @@
 * Please add functionality as neeeded.
 * https://stackoverflow.com/a/826027/1202830
 */
+#ifdef __APPLE__
+#include <uio.h>
+#endif
 
 #include <stdlib.h>
 #include <io.h>
